@@ -101,66 +101,67 @@ export class TeamsController {
     const user: JwtToken = request.user;
     console.log('user', user);
     const allowedTeams = qualifiedTeams.teamIds;
-  //         maxPoints: submission.problem.maxPoints,
-  //     };
-  //   });
+    //         maxPoints: submission.problem.maxPoints,
+    //     };
+    //   });
 
-  //   /** if problems array is empty (case when problems are not being assigned, assign unique problem IDs) */
-  //   // let problemsList = [];
-  //   // if (problems.length === 0) {
-  //   //   problemsList = judgeSubmissions
-  //   //     .map((submission) => submission.problem.id)
-  //   //     .filter((value, index, self) => self.indexOf(value) === index)
-  //   //     .map((id) => {
-  //   //       return { id };
-  //   //     });
-  //   // }
+    //   /** if problems array is empty (case when problems are not being assigned, assign unique problem IDs) */
+    //   // let problemsList = [];
+    //   // if (problems.length === 0) {
+    //   //   problemsList = judgeSubmissions
+    //   //     .map((submission) => submission.problem.id)
+    //   //     .filter((value, index, self) => self.indexOf(value) === index)
+    //   //     .map((id) => {
+    //   //       return { id };
+    //   //     });
+    //   // }
 
-  //   /** get best of each problem */
-  //   const bestOfEachProblem = [];
+    //   /** get best of each problem */
+    //   const bestOfEachProblem = [];
 
-  //   /** iterate and generate list of unique and maximum valued submissions */
-  //   // for (
-  //   //   let i = 0, maxPoints: number, localMax: number;
-  //   //   i < (problems.length === 0 ? problemsList.length : problems.length);
-  //   //   i += 1
-  //   // ) {
-  //   //   maxPoints = -1;
-  //   //   localMax = -1;
-  //   //   const { id } = problems.length === 0 ? problemsList[i] : problems[i];
-  //   //   let problemName;
-  //   //   let maxProblemPoints;
+    //   /** iterate and generate list of unique and maximum valued submissions */
+    //   // for (
+    //   //   let i = 0, maxPoints: number, localMax: number;
+    //   //   i < (problems.length === 0 ? problemsList.length : problems.length);
+    //   //   i += 1
+    //   // ) {
+    //   //   maxPoints = -1;
+    //   //   localMax = -1;
+    //   //   const { id } = problems.length === 0 ? problemsList[i] : problems[i];
+    //   //   let problemName;
+    //   //   let maxProblemPoints;
 
-  //   //   for (let j = 0; j < judgeSubmissions.length; j += 1) {
-  //   //     if (judgeSubmissions[j].problem.id === id && judgeSubmissions[j].points >= maxPoints) {
-  //   //       maxPoints = judgeSubmissions[j].points;
-  //   //       localMax = judgeSubmissions[j].id;
-  //   //       problemName = judgeSubmissions[j].problem.name;
-  //   //       maxProblemPoints = judgeSubmissions[j].problem.maxPoints;
-  //   //     }
-  //   //   }
+    //   //   for (let j = 0; j < judgeSubmissions.length; j += 1) {
+    //   //     if (judgeSubmissions[j].problem.id === id && judgeSubmissions[j].points >= maxPoints) {
+    //   //       maxPoints = judgeSubmissions[j].points;
+    //   //       localMax = judgeSubmissions[j].id;
+    //   //       problemName = judgeSubmissions[j].problem.name;
+    //   //       maxProblemPoints = judgeSubmissions[j].problem.maxPoints;
+    //   //     }
+    //   //   }
 
-  //   //   /** store in array for client response */
-  //   //   bestOfEachProblem.push({
-  //   //     problemID: id,
-  //   //     submissionID: localMax,
-  //   //     points: maxPoints,
-  //   //     problemName,
-  //   //     maxProblemPoints,
-  //   //   });
-  //   // }
+    //   //   /** store in array for client response */
+    //   //   bestOfEachProblem.push({
+    //   //     problemID: id,
+    //   //     submissionID: localMax,
+    //   //     points: maxPoints,
+    //   //     problemName,
+    //   //     maxProblemPoints,
+    //   //   });
+    //   // }
 
-  //   /** using spread operator to override the [[Team]] properties. */
-  //   return { ...teamDetails, judgeSubmissions, bestOfEachProblem };
-  // }
+    //   /** using spread operator to override the [[Team]] properties. */
+    //   return { ...teamDetails, judgeSubmissions, bestOfEachProblem };
+    // }
 
-  /**
-   * Responds to: _DELETE(`/`)_
-   *
-   * Delete all teams
-   */
-  // @Delete()
-  // removeAll() {
-  //   return this.teamsService.removeAll();
-  // }
+    /**
+     * Responds to: _DELETE(`/`)_
+     *
+     * Delete all teams
+     */
+    // @Delete()
+    // removeAll() {
+    //   return this.teamsService.removeAll();
+    // }
+  }
 }
